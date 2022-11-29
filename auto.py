@@ -122,7 +122,6 @@ for i in range(0, len(grabbed_files) - len(grabbed_files)%3, 3):
 
     aligned0 = imgs[0]
     try:
-<<<<<<< HEAD
         print('Aligning 1/2')
         aligned1 = match_images_cv(aligned0, imgs[1])
         print('Aligning 2/2')
@@ -130,19 +129,6 @@ for i in range(0, len(grabbed_files) - len(grabbed_files)%3, 3):
     except:
         print("Could not line up, skipping to the next image.")
         continue
-    
-    
-=======
-        print('Aligning 1/3')
-        aligned1 = match_images_cv(aligned0, imgs[1])
-        print('Aligning 2/3')
-        aligned2 = match_images_cv(aligned1, imgs[2])
-        print('Aligning 3/3')
-        aligned3 = match_images_cv(aligned2, imgs[3])
-    except:
-        print("Could not line up, skipping to the next image.")
-        continue
->>>>>>> 9ac028de86755e3cfbd3b31218d799f31ac79b6e
 
     hor0 = np.average(aligned0[:,:,0], axis=0)
     hor1 = np.average(aligned1[:,:,0], axis=0)
